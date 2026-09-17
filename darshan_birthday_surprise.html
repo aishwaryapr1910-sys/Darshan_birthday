@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Darshan ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff0f5,#ffe4ec,#f8e8ff);color:#4b3040;min-height:100vh;overflow-x:hidden}
+button{font:inherit}
+.wrap{max-width:720px;margin:auto;padding:24px 16px 60px}
+.card{background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-radius:28px;padding:28px 20px;text-align:center;box-shadow:0 15px 45px rgba(120,70,100,.15);margin:18px 0}
+.hidden{display:none!important}
+h1{font-size:clamp(34px,9vw,62px);margin:8px 0;color:#b83b68}
+h2{font-size:30px;color:#9d4266}
+p{line-height:1.7;font-size:17px}
+.heart{font-size:56px;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+.btn{border:0;border-radius:999px;padding:13px 23px;background:#b83b68;color:#fff;cursor:pointer;margin:7px;box-shadow:0 7px 18px rgba(184,59,104,.22)}
+.btn.alt{background:#fff;color:#a33c63;border:1px solid #f0bfd0}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.photo{aspect-ratio:1;border-radius:18px;overflow:hidden;background:#f7dbe5;display:flex;align-items:center;justify-content:center;color:#9a526d;font-weight:700}
+.photo img{width:100%;height:100%;object-fit:cover}
+.note{text-align:left;background:#fff8fb;border-radius:20px;padding:18px}
+.reveal{font-size:22px;color:#a52f60;font-weight:700}
+.small{font-size:13px;opacity:.7}
+.floating{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+.floating span{position:absolute;font-size:22px;animation:float 7s linear infinite;opacity:.55}
+@keyframes float{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="floating" id="float"></div>
+<div class="wrap">
+
+<section class="card" id="start">
+  <div class="heart">🎁</div>
+  <p class="small">A tiny surprise made especially for</p>
+  <h1>Darshan</h1>
+  <p>There are a few things I wanted to tell you…<br>but maybe they’re better discovered one by one. 🫣</p>
+  <button class="btn" onclick="show('birthday')">Open your surprise ✨</button>
+</section>
+
+<section class="card hidden" id="birthday">
+  <div class="heart">🎂</div>
+  <h1>HAPPY BIRTHDAY!</h1>
+  <h2>Darshan ❤️</h2>
+  <p>To my best-best friend, my favourite person to annoy 😂, and someone who somehow became a little more special than I planned. 🫣</p>
+  <button class="btn" onclick="show('memories')">Next →</button>
+</section>
+
+<section class="card hidden" id="memories">
+  <h2>📸 Our Little Memories</h2>
+  <p>Three photos. Three memories. And probably a thousand stories behind them. 🤍</p>
+  <div class="photos">
+    <label class="photo" id="p1">Photo 1<br>Tap to add</label>
+    <label class="photo" id="p2">Photo 2<br>Tap to add</label>
+    <label class="photo" id="p3">Photo 3<br>Tap to add</label>
+  </div>
+  <p class="small">Tip: to add your photos, replace the three photo placeholders in the HTML with your image filenames.</p>
+  <button class="btn" onclick="show('letter')">There's more 💌</button>
+</section>
+
+<section class="card hidden" id="letter">
+  <h2>💌 A Little Letter</h2>
+  <div class="note">
+    <p>Darshan… ❤️</p>
+    <p>If you're reading this, it means you actually scanned the little surprise I made for you. 🫣</p>
+    <p>First of all… HAPPY BIRTHDAYYY! 🎂🥳</p>
+    <p>I don't know how to put everything I feel into one message, because you're not just another person in my life. Somehow, you became one of those people whose presence just feels different.</p>
+    <p>You're my best friend, my favourite person to annoy 😂, my partner in random conversations, and honestly… someone who has a very special place in my heart. 🤍</p>
+    <p>We've had our funny moments, our silly conversations, our quiet moments and all those little memories that might look ordinary to someone else… but somehow mean a lot to me.</p>
+    <p>And there's one tiny secret hidden between all these words…</p>
+    <p>Sometimes I wonder if you realise just how special you are to me. 🫣❤️</p>
+    <p>Maybe I'm not always brave enough to say everything directly. Maybe some feelings are better left as little hints, little smiles and little moments that only two people understand.</p>
+    <p>But today, I just want you to know this: no matter where life takes us, I hope you always remember that there is someone who genuinely wishes the happiest things for you.</p>
+    <p>I hope you laugh a lot. I hope you achieve everything you've dreamed about. I hope you meet beautiful moments wherever you go. And I hope I get to be somewhere in those memories too. 🥹❤️</p>
+    <p>So here's to another year of you being you…</p>
+    <p>My best friend.<br>My favourite troublemaker.<br>And maybe… just maybe… something a little more. 🫣💗</p>
+    <p>Happy Birthday, Darshan. 🎂✨</p>
+    <p>Stay happy. Stay crazy. Stay exactly the way you are.</p>
+  </div>
+  <button class="btn" onclick="show('final')">One last thing… 🫣</button>
+</section>
+
+<section class="card hidden" id="final">
+  <div class="heart">💗</div>
+  <h2>One Last Secret…</h2>
+  <p>Some people become memories.<br>Some become friends.</p>
+  <p class="reveal">And then there are those rare people who somehow become a little piece of your heart. ❤️</p>
+  <p>Happy Birthday, Darshan. 🥹🎂</p>
+  <p class="small">Made with a little too much love. 🫣</p>
+  <button class="btn alt" onclick="show('start')">Replay ↺</button>
+</section>
+
+</div>
+<script>
+function show(id){
+ document.querySelectorAll('.card').forEach(x=>x.classList.add('hidden'));
+ document.getElementById(id).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+const f=document.getElementById('float');
+['❤️','✨','🎈','💗','🌸','💕'].forEach((e,i)=>{
+ for(let j=0;j<3;j++){
+  const s=document.createElement('span'); s.textContent=e;
+  s.style.left=(i*16+j*4)+'%'; s.style.animationDelay=(j*1.2)+'s';
+  f.appendChild(s);
+ }
+});
+</script>
+</body>
+</html>
